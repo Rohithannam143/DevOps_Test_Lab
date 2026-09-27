@@ -16,10 +16,9 @@ pipeline {
         sh '''set -e
           WAR="target/${APP_NAME}.war"
           test -f "$WAR"
-          sudo mkdir -p "$TOMCAT_WEBAPPS/rollback"
-          if [ -f "$TOMCAT_WEBAPPS/${APP_NAME}.war" ]; then sudo cp "$TOMCAT_WEBAPPS/${APP_NAME}.war" "$TOMCAT_WEBAPPS/rollback/${APP_NAME}.war.prev"; fi
-          sudo cp "$WAR" "$TOMCAT_WEBAPPS/${APP_NAME}.war"
-          sudo chown tomcat:tomcat "$TOMCAT_WEBAPPS/${APP_NAME}.war" || true
+          mkdir -p "$TOMCAT_WEBAPPS/rollback"
+if [ -f "$TOMCAT_WEBAPPS/${APP_NAME}.war" ]; then cp "$TOMCAT_WEBAPPS/${APP_NAME}.war" "$TOMCAT_WEBAPPS/rollback/${APP_NAME}.war.prev"; fi
+cp "$WAR" "$TOMCAT_WEBAPPS/${APP_NAME}.war"
           sleep 5
         '''
       }
@@ -33,8 +32,7 @@ pipeline {
     failure {
       sh '''
         if [ -f "$TOMCAT_WEBAPPS/rollback/${APP_NAME}.war.prev" ]; then
-          sudo cp "$TOMCAT_WEBAPPS/rollback/${APP_NAME}.war.prev" "$TOMCAT_WEBAPPS/${APP_NAME}.war"
-          sudo chown tomcat:tomcat "$TOMCAT_WEBAPPS/${APP_NAME}.war" || true
+          cp "$TOMCAT_WEBAPPS/rollback/${APP_NAME}.war.prev" "$TOMCAT_WEBAPPS/${APP_NAME}.war"
         fi
       '''
       echo 'Pipeline failed; previous WAR was restored when available.'
