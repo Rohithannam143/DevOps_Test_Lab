@@ -21,6 +21,7 @@ if [ -f "$TOMCAT_WEBAPPS/${APP_NAME}.war" ]; then cp "$TOMCAT_WEBAPPS/${APP_NAME
 cp "$WAR" "$TOMCAT_WEBAPPS/${APP_NAME}.war"
           sleep 5
         '''
+	 error('INTENTIONAL ROLLBACK TEST')
       }
     }
     stage('Health Check') {
