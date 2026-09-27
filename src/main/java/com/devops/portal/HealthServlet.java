@@ -1,0 +1,3 @@
+package com.devops.portal;
+import jakarta.servlet.annotation.WebServlet;import jakarta.servlet.http.*;import java.io.*;import java.sql.*;
+@WebServlet("/health") public class HealthServlet extends HttpServlet{protected void doGet(HttpServletRequest r,HttpServletResponse p)throws IOException{p.setContentType("application/json;charset=UTF-8");try(Connection c=Database.getConnection();Statement s=c.createStatement()){s.execute("SELECT 1");p.getWriter().print("{\"status\":\"UP\",\"database\":\"UP\"}");}catch(Exception e){p.setStatus(503);p.getWriter().print("{\"status\":\"DOWN\",\"database\":\"DOWN\"}");}}}

@@ -1,0 +1,21 @@
+name,email,feedback,rating,date,category
+Asha,asha@example.com,Great mentoring support,5,2026-09-01,Teaching & Faculty
+Rahul,rahul@example.com,Lab systems need faster startup,3,2026-09-02,Labs & Technology
+Priya,priya@example.com,Library study space is comfortable,4,2026-09-03,Library
+Kiran,kiran@example.com,More campus Wi-Fi access points would help,3,2026-09-04,Infrastructure
+Sneha,sneha@example.com,Exam timetable was communicated clearly,5,2026-09-05,Examinations
+Vikram,vikram@example.com,Hostel maintenance response is slow,2,2026-09-06,Hostel
+Anu,anu@example.com,Faculty feedback after assignments is useful,4,2026-09-07,Teaching & Faculty
+Ravi,ravi@example.com,Transport timing needs an evening option,3,2026-09-08,Transport
+Meena,meena@example.com,Campus cleanliness improved this month,4,2026-09-09,Campus
+Arjun,arjun@example.com,Student events are engaging,5,2026-09-10,Events & Activities
+Divya,divya@example.com,Projector quality in classroom B is poor,2,2026-09-11,Infrastructure
+Nikhil,nikhil@example.com,Programming lab needs updated IDEs,3,2026-09-12,Labs & Technology
+Harsha,harsha@example.com,Library hours should extend during exams,3,2026-09-13,Library
+Pooja,pooja@example.com,Internal assessment instructions were clear,4,2026-09-14,Examinations
+Manoj,manoj@example.com,Hostel water supply needs attention,2,2026-09-15,Hostel
+Keerthi,keerthi@example.com,Teachers are approachable,5,2026-09-16,Teaching & Faculty
+Sanjay,sanjay@example.com,Bus route coverage could improve,3,2026-09-17,Transport
+Lakshmi,lakshmi@example.com,More technical workshops would be useful,4,2026-09-18,Events & Activities
+Varun,varun@example.com,Wi-Fi reliability is inconsistent,3,2026-09-19,Infrastructure
+Ishita,ishita@example.com,Overall campus experience is positive,4,2026-09-20,Campus
